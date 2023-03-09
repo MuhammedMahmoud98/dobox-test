@@ -11,6 +11,7 @@ import { RemoveClassDirective } from './directives/remove-class.directive';
 import {RouterLinkActive, RouterLinkWithHref} from "@angular/router";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { RoundedMembersComponent } from './components/rounded-members/rounded-members.component';
+import {TranslateModule} from "@ngx-translate/core";
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { RoundedMembersComponent } from './components/rounded-members/rounded-me
     MaterialModule,
     RouterLinkWithHref,
     RouterLinkActive,
+    TranslateModule,
   ],
   exports: [
     NavBarComponent,
