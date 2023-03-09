@@ -40,11 +40,6 @@ $dobox-theme: mat.define-light-theme((
 @import "assets/scss/custom-theme";
 /* You can add global styles to this file, and also import other style files */
 
-@font-face {
-  font-family: 'Roboto';
-  src: url('assets/fonts/STCForward-Regular.ttf');
-}
-
 html, body { height: 100%; overflow-x: hidden }
 body { margin: 0; background-color: $stc-gray }
 
