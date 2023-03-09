@@ -3,8 +3,28 @@
     <img class="stc-logo" src="./assets/icons/hub-logo.svg" alt="stc-logo">
   </div>
   <div class="nav-items">
-    <div matRipple class="nav-item" *ngFor="let item of navItems">
-      <span class="material-icons-outlined">{{item}}</span>
+    <div matRipple class="nav-item" *ngFor="let item of navItems;let last = last">
+      <span *ngIf="!last; else userMenu" class="material-icons-outlined">{{item}}</span>
     </div>
+    <ng-template #userMenu>
+      <div [matMenuTriggerFor]="navMenu" class="d-flex align-items-center">
+        <span class="user-name">Muhammed</span>
+        <span class="material-icons-outlined mx-2">person_outline</span>
+      </div>
+      <mat-menu #navMenu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>person_pin</mat-icon>
+          <span>Profile</span>
+        </button>
+        <button mat-menu-item (click)="switchLanguage()">
+          <mat-icon>language</mat-icon>
+          <span>العربية</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>logout</mat-icon>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+    </ng-template>
   </div>
 </nav>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {InternationalizationService} from "../../services/internationalization.service";
 
 @Component({
   selector: 'app-nav-bar',
@@ -12,9 +13,14 @@ export class NavBarComponent implements OnInit {
     'person_outline',
   ];
 
-  constructor() { }
+  constructor(private readonly internationalizationService: InternationalizationService) { }
 
   ngOnInit(): void {
+  }
+
+
+  switchLanguage(): void {
+    this.internationalizationService.switchLang();
   }
 
 }
