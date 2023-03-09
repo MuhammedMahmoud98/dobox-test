@@ -1,0 +1,27 @@
+@import "../../../../assets/scss/variables";
+@import "../../../../assets/scss/mixins";
+.stc-nav {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  padding: 0 1rem ;
+  @include flexBetween;
+  .logo-wrapper {
+    .stc-logo {
+      width: 60px;
+    }
+  }
+
+  .nav-items {
+    @include flexBetween;
+    .nav-item {
+      cursor: pointer;
+      padding: 0.6rem;
+      border-right: 1px solid $stc-gray;
+      color: $stc-silver;
+    }
+  }
+}

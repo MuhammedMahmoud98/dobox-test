@@ -1,0 +1,36 @@
+@import "../../../../assets/scss/variables";
+@import "../../../../assets/scss/mixins";
+
+.rounded-members {
+  display: flex;
+  align-items: center;
+  transform: translateX(40px);
+  .rounded-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    background-color: $stc-gray;
+    transition: 0.2s ease-out;
+    &:not(:last-child) {
+      margin-right: -65px;
+    }
+    .rounded-img {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    &:hover {
+      z-index: 999;
+      transform: translateY(-5px);
+    }
+  }
+  :nth-child(1) {
+    &:hover {
+      z-index: 1000;
+    }
+  }
+}

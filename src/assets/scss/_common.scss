@@ -1,0 +1,27 @@
+@import "variables";
+@import "fonts";
+.stc-light-shadow {
+  box-shadow: 2px 4px 7px rgba($stc-primary, 0.06);
+}
+
+.side-nav-active-link {
+  background-color: rgba($stc-silver, 0.2);
+  .platform-name {
+    font-weight: map-get($font-weights, 'light');
+  }
+}
+
+.sub-platform-active-link {
+  position: relative;
+  background-color: $stc-gray;
+  &::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 6px;
+    border-radius: 10px;
+    background-color: $stc-primary;
+    top: 0;
+    left: 0;
+  }
+}

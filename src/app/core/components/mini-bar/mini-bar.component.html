@@ -1,0 +1,8 @@
+<aside class="mini-bar">
+  <div class="mini-items">
+    <a class="mini-item" matRipple *ngFor="let icon of iconPaths">
+      <img class="mini-icon" [src]="'assets/icons/' + icon" [alt]="icon | removeExtension">
+      <span class="item-caption">{{icon | removeExtension | titlecase}}</span>
+    </a>
+  </div>
+</aside>

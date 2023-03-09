@@ -1,0 +1,8 @@
+<section class="sub-platform-routes">
+  <a class="sub-platform-route"
+     [routerLink]="'/platform/' + id + '/' + subPlatform?.name"
+     routerLinkActive="sub-platform-active-link"
+     *ngFor="let subPlatform of subPlatforms"
+  >{{subPlatform?.name | titlecase}}</a>
+  <button mat-button matTooltip="add sub platform" class="outlined-btn mx-1">+</button>
+</section>

@@ -1,0 +1,33 @@
+@import "../../../../assets/scss/variables";
+@import "../../../../assets/scss/mixins";
+.mini-bar {
+  position: fixed;
+  top: 48px;
+  z-index: 999;
+  background-color: $stc-primary;
+  transition: width 0.2s ease-out;
+  height: calc(100vh - 48px);
+  width: 40px;
+  //width: 180px;
+  .mini-items {
+    @include flexColumn;
+    display: inline;
+    word-wrap: break-word;
+    .mini-item {
+      white-space: nowrap;
+      @include flexCenter;
+      padding: 0.7rem;
+      color: #fff;
+      cursor: pointer;
+      .mini-icon {
+        width: 20px;
+      }
+    }
+    .item-caption {
+      margin: 0 0.5rem;
+    }
+  }
+  &:hover {
+    width: 150px;
+  }
+}

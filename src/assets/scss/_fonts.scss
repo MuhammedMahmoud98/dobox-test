@@ -1,0 +1,27 @@
+$font-sizes: (
+  'x-small': 12px,
+  'small': 14px,
+  'normal': 16px,
+  'medium': 20px,
+  'large': 22px,
+  'x-large': 30px,
+);
+
+$font-weights: (
+  'light': 500,
+  'semi-bold': 700,
+  'bold': 900
+);
+
+
+.font-sm {
+  font-size: map-get($font-sizes, 'small');
+}
+
+.font-md {
+  font-size: map-get($font-sizes, 'medium');
+}
+
+.font-lg {
+  font-size: map-get($font-sizes, 'x-large');
+}

@@ -1,0 +1,32 @@
+@import "../../../../assets/scss/variables";
+@import "../../../../assets/scss/mixins";
+
+.platform-list-wrapper {
+  background-color: $stc-gray;
+  //padding: 0.3rem 0.6rem;
+  margin-top: 0.6rem;
+  border-radius: $stc-radius;
+  padding: 0.5rem;
+  .platform-item {
+    @include flexCenter;
+    padding: 0.5rem 0.3rem;
+    border-radius: $stc-radius;
+    text-decoration: none;
+    .platform-indicator {
+      text-align: center;
+      background-color: #fff;
+      border-radius: $stc-radius;
+      width: 30px;
+      padding: 0.2rem 0.3rem;
+    }
+    .platform-name {
+      margin: 0 0.5rem;
+    }
+    &:hover {
+      background-color: rgba($stc-silver, 0.2);
+    }
+    &:active {
+      color: unset;
+    }
+  }
+}

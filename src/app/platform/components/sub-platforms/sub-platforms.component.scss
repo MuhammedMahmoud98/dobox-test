@@ -1,0 +1,26 @@
+@import "../../../../assets/scss/fonts";
+@import "../../../../assets/scss/mixins";
+@import "../../../../assets/scss/variables";
+
+.sub-platform-routes {
+  display: flex;
+  align-items: center;
+  :nth-child(2) {
+    margin: 0 0.5rem;
+  }
+  .sub-platform-route {
+    position: relative;
+    text-decoration: none;
+    border-radius: $stc-radius;
+    color: #000;
+    @include devices(laptop) {
+      padding: 0.6rem 2rem;
+    }
+    @include devices(mobile) {
+      padding: 0.6rem 0.8rem;
+    }
+    &:hover {
+      background-color: $stc-gray;
+    }
+  }
+}

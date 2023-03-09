@@ -1,0 +1,77 @@
+@import "../../../../assets/scss/variables";
+@import "../../../../assets/scss/mixins";
+@import "../../../../assets/scss/fonts";
+
+.stc-side-bar {
+  position: sticky;
+  top: 70px;
+  background-color: #fff;
+  padding: 0.7rem;
+  border-radius: $stc-radius;
+  .app-name {
+    font-weight: map-get($font-weights, 'light');
+    font-size: map-get($font-sizes, 'x-large');
+    color: $stc-primary;
+  }
+
+  .work-spaces {
+    @include flexBetween;
+    cursor: pointer;
+    padding: 0.5rem 0.3rem;
+    background-color: $stc-gray;
+    color: $stc-primary;
+    .info-wrapper {
+      @include flexCenter;
+      .work-letter {
+        padding: 0.3rem 0.7rem;
+        background-color: #fff;
+        border-radius: $stc-radius;
+        font-weight: map-get($font-weights, 'light');
+      }
+      .work-space-info {
+        margin: 0 0.7rem;
+        .main-title {
+          text-transform: uppercase;
+          font-weight: map-get($font-weights, 'light');
+          //margin: 0 0.6rem;
+        }
+        .space-title {
+          margin: 0 0.3rem;
+        }
+      }
+    }
+  }
+
+  .nav-routes {
+    .nav-route-item {
+      padding: 0.6rem;
+      cursor: pointer;
+      @include flexCenter;
+      .item-icon {
+        span {
+          font-size: map-get($font-sizes, 'medium');
+          display: flex;
+        }
+      }
+      .item-title {
+
+      }
+    }
+  }
+
+  .platform {
+    @include flexBetween;
+    background-color: $stc-primary;
+    border-radius: $stc-radius;
+    color: #fff;
+    padding: 0.5rem 0.6rem;
+    .platform-wrapper {
+      @include flexCenter;
+      .platform-icon {
+
+      }
+      .platform-title {
+      }
+    }
+  }
+}

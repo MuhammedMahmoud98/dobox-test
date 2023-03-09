@@ -1,0 +1,21 @@
+.ltr {
+  direction: ltr;
+  .custom-container {
+    padding: 4rem 2rem 0 3rem;
+  }
+}
+
+.rtl {
+  direction: rtl;
+  .custom-container {
+    padding: 4rem 3rem 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ltr, .rtl {
+    .custom-container {
+     all: initial;
+    }
+  }
+}

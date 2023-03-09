@@ -1,0 +1,60 @@
+<aside class="stc-side-bar mt-5 mt-sm-0 stc-light-shadow">
+  <h1 class="app-name">Dobox</h1>
+  <!-- WORK SPACE -->
+  <div class="work-spaces" [matMenuTriggerFor]="menu" matRipple>
+    <div class="info-wrapper">
+      <div class="work-letter">G</div>
+      <div class="work-space-info">
+        <span class="main-title">gceo</span>
+        <span class="space-title">Workspaces</span>
+      </div>
+    </div>
+    <span class="material-icons-outlined">keyboard_arrow_down</span>
+  </div>
+  <mat-menu #menu="matMenu" xPosition="before">
+    <button mat-menu-item>
+      <mat-icon>dialpad</mat-icon>
+      <span>Redial</span>
+    </button>
+    <button mat-menu-item disabled>
+      <mat-icon>voicemail</mat-icon>
+      <span>Check voice mail</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>notifications_off</mat-icon>
+      <span>Disable alerts</span>
+    </button>
+  </mat-menu>
+  <mat-divider class="my-3"></mat-divider>
+  <!-- NAV ROUTES -->
+  <div class="nav-routes">
+    <div class="nav-route-item" matRipple>
+      <div class="item-icon">
+        <span class="material-icons-outlined">analytics</span>
+      </div>
+      <div class="item-title mx-2">Main dashboard</div>
+    </div>
+    <div class="nav-route-item" matRipple>
+      <div class="item-icon">
+        <span class="material-icons-outlined">settings</span>
+      </div>
+      <div class="item-title mx-2">Manage your workspaces</div>
+    </div>
+  </div>
+  <mat-divider class="my-3"></mat-divider>
+  <!-- PLATFORMS -->
+  <div class="platform">
+    <div class="platform-wrapper">
+      <div class="platform-icon">
+        <span class="material-icons-outlined">widgets</span>
+      </div>
+      <span class="platform-title mx-2">
+        Platforms
+      </span>
+    </div>
+    <button mat-raised-button class="moon-light-btn" matTooltip="Add new platform">
+      <span class="material-icons-outlined">add</span>
+    </button>
+  </div>
+  <app-platforms-list [platforms]="platforms"></app-platforms-list>
+</aside>
