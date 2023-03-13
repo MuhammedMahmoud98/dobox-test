@@ -8,6 +8,7 @@
   border-radius: $stc-radius;
   padding: 0.5rem;
   .platform-item {
+    color: #000;
     @include flexCenter;
     padding: 0.5rem 0.3rem;
     border-radius: $stc-radius;

@@ -1,5 +1,5 @@
 <section class="platform-list-wrapper">
-  <a class="platform-item" matRipple *ngFor="let platform of platforms" [routerLink]="'/platform/' + platform?.id" routerLinkActive="side-nav-active-link">
+  <a class="platform-item" matRipple *ngFor="let platform of platforms" [routerLink]="['/platform/', platform?.id]" routerLinkActive="side-nav-active-link">
     <div class="platform-indicator">{{platform?.name || '' | firstLetter | uppercase}}</div>
     <div class="platform-name">{{platform?.name | titlecase}}</div>
   </a>

@@ -7,7 +7,8 @@
 .side-nav-active-link {
   background-color: rgba($stc-silver, 0.2);
   .platform-name {
-    font-weight: map-get($font-weights, 'light');
+    color: $stc-primary;
+    font-weight: map-get($font-weights, 'semi-bold');
   }
 }
 

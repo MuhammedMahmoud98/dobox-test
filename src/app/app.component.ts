@@ -9,18 +9,12 @@ import {InternationalizationService} from "./core/services/internationalization.
 })
 export class AppComponent implements OnInit {
 
-
   constructor(
     private readonly translate: TranslateService,
-    private readonly internationalizationService: InternationalizationService
-  ) {
-  }
+    private readonly internationalizationService: InternationalizationService,
+  ) {}
 
   ngOnInit(): void {
     this.internationalizationService.setCurrentLangAndDirection();
-  }
-
-  switchLang(): void {
-    this.internationalizationService.switchLang();
   }
 }
