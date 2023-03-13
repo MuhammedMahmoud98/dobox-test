@@ -1,5 +1,5 @@
-<app-nav-bar></app-nav-bar>
-<main class="d-flex align-items-center">
+<app-nav-bar *ngIf="isLoggedIn"></app-nav-bar>
+<main class="d-flex align-items-center" *ngIf="isLoggedIn">
   <app-mini-bar></app-mini-bar>
   <div class="container-fluid custom-container" appRemoveClass className="custom-container">
     <div class="row">
@@ -12,3 +12,4 @@
     </div>
   </div>
 </main>
+<router-outlet name="auth"></router-outlet>

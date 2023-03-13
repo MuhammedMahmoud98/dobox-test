@@ -1,0 +1,39 @@
+@import "../../../../assets/scss/variables";
+
+
+$logo-margin-block: 80px;
+$logo-margin-inline-start: 122px;
+$logo-width: 140px;
+$logo-height: 89px;
+$bg-path: '../../../../assets/images/login-bg.png';
+$logo-path: '../../../../assets/images/stc-logo.png';
+$header-font-size: 45px;
+$header-font-weight: 600;
+$logo-inner-padding: 16px;
+
+
+.bg {
+    background: url($bg-path) 0% 0% / cover no-repeat;
+}
+
+.login-container {
+    background-color: $stc-white;
+
+    .stc-logo {
+        margin-block: $logo-margin-block;
+        margin-inline-start: calc($logo-margin-inline-start - $logo-inner-padding);
+        width: $logo-width;
+        height: $logo-height;
+        background: url($logo-path) 0% 0% no-repeat;
+    }
+}
+
+main {
+    height: 100%;
+}
+
+h1 {
+    font-size: $header-font-size;
+    font-weight: $header-font-weight;
+    margin-inline-start: $logo-margin-inline-start;
+}
