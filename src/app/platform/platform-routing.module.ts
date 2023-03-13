@@ -17,18 +17,9 @@ const routes: Routes = [
         path: ':id',
         component: PlatformDetailsComponent,
         children: [
-          {
-            path: 'kanban',
-            component: KanbanComponent,
-          },
-          {
-            path: 'main-table',
-            component: MainTableComponent,
-          },
-          {
-            path: 'dashboard',
-            component: DashboardComponent,
-          }
+          { path: 'kanban', loadChildren: () => import('../kanban/kanban.module').then(m => m.KanbanModule) },
+          { path: 'main-table', loadChildren: () => import('../main-table/main-table.module').then(m => m.MainTableModule) },
+          { path: 'dashboard', loadChildren: () => import('../dashboard/dashboard.module').then(m => m.DashboardModule) }
         ]
       }
     ]

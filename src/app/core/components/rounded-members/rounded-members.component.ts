@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {InternationalizationService} from "../../services/internationalization.service";
 
 @Component({
   selector: 'app-rounded-members',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rounded-members.component.scss']
 })
 export class RoundedMembersComponent implements OnInit {
-
-  constructor() { }
+  currentLang?: string;
+  constructor(private readonly internationalizationService: InternationalizationService) { }
 
   ngOnInit(): void {
+    this.currentLang = this.internationalizationService.currentLang;
   }
 
 }
