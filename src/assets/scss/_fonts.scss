@@ -27,6 +27,7 @@ $font-weights: (
 }
 
 @font-face {
-  font-family: 'STCForward';
-  src: url('~src/assets/fonts/STCForward-Regular.ttf');
+  font-family: 'STCForward' !important;
+  //src: url('~src/assets/fonts/STCForward-Regular.ttf') format("ttf");
+  src: url('~src/assets/fonts/STCForward-Bold.ttf') format("ttf");
 }

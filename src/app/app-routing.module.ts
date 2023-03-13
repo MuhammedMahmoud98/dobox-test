@@ -15,9 +15,6 @@ const routes: Routes = [
     path: 'platform',
     loadChildren: () => import('./platform/platform.module').then(m => m.PlatformModule)
   },
-  // { path: 'kanban', loadChildren: () => import('./kanban/kanban.module').then(m => m.KanbanModule) },
-  // { path: 'main-table', loadChildren: () => import('./main-table/main-table.module').then(m => m.MainTableModule) },
-  // { path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) }
 ];
 
 @NgModule({

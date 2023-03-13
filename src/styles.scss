@@ -6,13 +6,16 @@
 @import "assets/scss/common";
 @import "assets/scss/internationalization";
 @import "assets/grid/bootstrap-grid.min.css";
-@import "assets/scss/fonts";
 @import '~material-icons/iconfont/material-icons.css';
-
+@import '~@angular/material/theming';
+@import "assets/scss/fonts";
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
-@include mat.core();
+$custom-typography: mat.define-typography-config(
+  $font-family: 'STCForward, sans-serif'
+);
+@include mat.core($custom-typography);
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
@@ -38,8 +41,8 @@ $dobox-theme: mat.define-light-theme((
 // that you are using.
 @include mat.all-component-themes($dobox-theme);
 @import "assets/scss/custom-theme";
+
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; overflow-x: hidden }
 body { margin: 0; background-color: $stc-gray; }
-
