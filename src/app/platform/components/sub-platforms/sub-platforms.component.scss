@@ -13,8 +13,11 @@
     text-decoration: none;
     border-radius: $stc-radius;
     color: #000;
-    @include devices(laptop) {
+    @include devices(desktop) {
       padding: 0.6rem 2rem;
+    }
+    @include devices(laptop) {
+      padding: 0.6rem 1rem;
     }
     @include devices(mobile) {
       padding: 0.6rem 0.8rem;
