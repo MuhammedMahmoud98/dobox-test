@@ -3,30 +3,39 @@
         <div class="stc-logo">
         </div>
         <h1>Sign in</h1>
+
         <form (ngSubmit)="onSubmit()" [formGroup]="loginForm" *ngIf="loginForm" class="row">
-            <h2>Email:</h2>
+            <h3>Email:</h3>
             <mat-form-field appearance="fill" class="col-12">
-                <input matInput formControlName="email" type="email" placeholder="enter your email">
-                <mat-hint>Hint Here</mat-hint>
+                <input matInput formControlName="email" type="email" placeholder="You@example.stc.com.sa"
+                    [matAutocomplete]="auto">
+                <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn"
+                    (optionSelected)="onOptionSelected($event)">
+                    <mat-option *ngFor="let option of filteredDomains$ | async" [value]="option.name">
+                        {{option.name}}
+                    </mat-option>
+                </mat-autocomplete>
                 <mat-error *ngIf="formControls['email']?.touched && formControls['email']?.hasError">
                     <ng-container *ngIf="formControls['email'].errors?.['required']">
-                        This field should be entered
+                        Email is required.
                     </ng-container>
 
                 </mat-error>
             </mat-form-field>
-            <h2>Password:</h2>
+            <h3>Password:</h3>
             <mat-form-field appearance="fill" class="col-12">
-                <input matInput formControlName="password" type="password" placeholder="enter your password">
+                <input matInput formControlName="password" type="password" placeholder="Enter your password">
                 <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
-                <mat-hint>Hint Here</mat-hint>
                 <mat-error *ngIf="formControls['password']?.touched && formControls['password']?.hasError">
                     <ng-container *ngIf="formControls['password'].errors?.['required']">
-                        This field should be entered
+                        Password is required.
                     </ng-container>
                 </mat-error>
             </mat-form-field>
+            <button mat-raised-button class="submit-btn" [disabled]="loginForm.invalid">Sign in</button>
         </form>
+        {{loginForm.value | json}}
+
     </div>
     <div class="col-7 bg">
 

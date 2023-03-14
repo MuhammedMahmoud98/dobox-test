@@ -43,6 +43,10 @@ h1 {
 form {
     margin: 0 auto;
     width: 66%;
+
+    h3 {
+        margin-bottom: 0;
+    }
 }
 
 mat-form-field {
@@ -51,4 +55,14 @@ mat-form-field {
     ::ng-deep .mat-form-field-infix {
         border-top: none !important;
     }
+}
+
+.submit-btn {
+    background-color: $stc-primary;
+    color: white;
+    margin: 0 auto;
+    width: 100%;
+    padding-block: 8px !important;
+    margin-top: 8px;
+    border-radius: 2px;
 }

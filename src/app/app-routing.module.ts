@@ -1,20 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth/guards/auth.guard';
+import { LoginGuard } from './auth/guards/login.guard';
+
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'Auth',
-    outlet: 'auth',
+    redirectTo: 'platform',
     pathMatch: 'full'
   },
   {
-    path: 'Auth',
+    path: 'auth',
+    canLoad: [LoginGuard],
     loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
-    outlet: 'auth'
   },
   {
     path: 'platform',
+    canLoad: [AuthGuard],
     loadChildren: () => import('./platform/platform.module').then(m => m.PlatformModule)
   },
 ];

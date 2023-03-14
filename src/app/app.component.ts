@@ -9,22 +9,24 @@ import { InternationalizationService } from "./core/services/internationalizatio
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  public isLoggedIn: boolean;
+  public isLoggedIn = false;
   constructor(
     private readonly translate: TranslateService,
     private readonly internationalizationService: InternationalizationService,
     private readonly authService: AuthService
   ) {
-    this.isLoggedIn = false;
   }
 
   ngOnInit(): void {
     this.internationalizationService.setCurrentLangAndDirection();
     this.authService.user$.subscribe((user) => {
+      console.log(`Logged In user`, user);
       if (user) {
-        console.log(user);
-        return;
+        // return;
+        this.isLoggedIn = true;
+      } else {
         this.isLoggedIn = false;
+
       }
     });
   }

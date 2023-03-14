@@ -1,15 +1,17 @@
-<app-nav-bar *ngIf="isLoggedIn"></app-nav-bar>
-<main class="d-flex align-items-center" *ngIf="isLoggedIn">
-  <app-mini-bar></app-mini-bar>
-  <div class="container-fluid custom-container" appRemoveClass className="custom-container">
-    <div class="row">
-      <div class="col-lg-3">
-        <app-side-bar></app-side-bar>
-      </div>
-      <div class="col-lg-9 p-lg-0">
-        <router-outlet></router-outlet>
+<ng-container *ngIf="isLoggedIn">
+  <app-nav-bar></app-nav-bar>
+  <main class="d-flex align-items-center">
+    <app-mini-bar></app-mini-bar>
+    <div class="container-fluid custom-container" appRemoveClass className="custom-container">
+      <div class="row">
+        <div class="col-lg-3">
+          <app-side-bar></app-side-bar>
+        </div>
+        <div class="col-lg-9 p-lg-0">
+          <router-outlet></router-outlet>
+        </div>
       </div>
     </div>
-  </div>
-</main>
-<router-outlet name="auth"></router-outlet>
+  </main>
+</ng-container>
+<router-outlet *ngIf="!isLoggedIn"></router-outlet>

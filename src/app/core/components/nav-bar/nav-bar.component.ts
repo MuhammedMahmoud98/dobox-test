@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {InternationalizationService} from "../../services/internationalization.service";
+import { AuthService } from 'src/app/auth/services/auth.service';
+import { InternationalizationService } from "../../services/internationalization.service";
 
 @Component({
   selector: 'app-nav-bar',
@@ -13,7 +14,7 @@ export class NavBarComponent implements OnInit {
     'person_outline',
   ];
 
-  constructor(private readonly internationalizationService: InternationalizationService) { }
+  constructor(private readonly internationalizationService: InternationalizationService, private readonly authService: AuthService) { }
 
   ngOnInit(): void {
   }
@@ -21,6 +22,9 @@ export class NavBarComponent implements OnInit {
 
   switchLanguage(): void {
     this.internationalizationService.switchLang();
+  }
+  logout(): void {
+    this.authService.resetUser();
   }
 
 }

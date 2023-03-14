@@ -1,4 +1,6 @@
 export interface User {
-    id?: number;
-    name?: string;
+    userId?: number;
+    username?: string;
+    token: string;
+    refreshToken: string;
 }
