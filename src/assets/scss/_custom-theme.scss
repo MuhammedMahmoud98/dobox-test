@@ -1,27 +1,30 @@
 @import "variables";
+
 .mat-raised-button {
   min-width: 40px !important;
   line-height: 20px !important;
   padding: 0.3rem 0.5rem !important;
 }
-.mat-form-field-appearance-fill .mat-form-field-flex {
-  padding: 0.3rem 1rem !important;
-}
+
+// .mat-form-field-appearance-fill .mat-form-field-flex {
+//   padding: 0.3rem 1rem !important;
+// }
 
 .mat-form-field-appearance-fill .mat-form-field-underline {
   display: none !important;
   all: unset;
 }
 
-.mat-form-field-infix {
-  padding: 0 !important;
-}
-.mat-form-field-wrapper {
-  padding: 0;
-}
+// .mat-form-field-infix {
+//   padding: 0 !important;
+// }
+// .mat-form-field-wrapper {
+//   padding: 0;
+// }
 .mat-input-underline {
   display: none !important;
 }
+
 .moon-light-btn {
   background-color: $stc-moon-light;
   color: #fff;
