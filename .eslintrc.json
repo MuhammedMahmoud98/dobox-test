@@ -26,6 +26,8 @@
         "plugin:import/typescript"
       ],
       "rules": {
+        "import/prefer-default-export": "off",
+        "no-useless-constructor": 0,
         "@angular-eslint/directive-selector": [
           "error",
           {
